@@ -10,3 +10,7 @@ body, h1, h2, p, ul, li {
     color: black;
     font-size: 30px;
   }
+
+.container {
+    display: flex;
+  }

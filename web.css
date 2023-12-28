@@ -18,3 +18,25 @@ body, h1, h2, p, ul, li {
     align-items: center;
     justify-content: space-between;
   }
+
+.wrapper {
+    width: 30%;
+}
+
+.captions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-caption,
+.right-caption {
+    flex: 1;
+}
+
+.left-caption {
+    text-align: left;
+}
+
+.right-caption {
+    text-align: right;
+}

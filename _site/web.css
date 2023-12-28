@@ -40,3 +40,34 @@ body, h1, h2, p, ul, li {
 .right-caption {
     text-align: right;
 }
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .wrapper {
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    
+    .wrapper {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    
+    .wrapper {
+        flex: 0 0 0 calc(50% - 20px);
+    }
+}

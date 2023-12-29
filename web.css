@@ -94,6 +94,17 @@ body, h1, h2, p, ul, li {
     .wrapper2 {
         flex: 0 0 calc(50% - 20px);
     }
+
+    .left-caption,
+    .right-caption {
+        font-size: 1.1em;
+    }
+
+    body, p, ul, li {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1em;
+    }
 }
 /* desktop */
 @media screen and (min-width: 1024px) {

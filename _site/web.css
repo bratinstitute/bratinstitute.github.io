@@ -12,7 +12,6 @@ body, h1, h2, p, ul, li {
   }
 
 .container {
-    /* background:rgb(234, 229, 212);*/
     padding: 5%;
     display: flex;
     align-items: center;
@@ -20,6 +19,11 @@ body, h1, h2, p, ul, li {
   }
 
 .wrapper {
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+.wrapper2 {
     width: 30%;
     margin-bottom: 50px;
 }
@@ -40,6 +44,14 @@ body, h1, h2, p, ul, li {
 
 .right-caption {
     text-align: right;
+}
+
+.wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.wrapper:hover img {
+    transform: scale(1.05);
 }
 
 /* mobile */

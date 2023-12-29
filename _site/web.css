@@ -65,6 +65,11 @@ body, h1, h2, p, ul, li {
         text-align: center;
     }
 
+    .wrapper2 {
+        width: 80%;
+        text-align: center;
+    }
+
     .left-caption,
     .right-caption {
         font-size: 1.4em;

@@ -55,7 +55,7 @@ body, h1, h2, p, ul, li {
 }
 
 /* mobile */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 640px) {
     .container {
         flex-direction: column;
     }
@@ -81,8 +81,8 @@ body, h1, h2, p, ul, li {
         font-size: 1.4em;
     }
 }
-/* tablet
-@media screen and (min-width: 831px) and (max-width: 1023px) {
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
     .container {
         flex-wrap: wrap;
     }
@@ -90,7 +90,11 @@ body, h1, h2, p, ul, li {
     .wrapper {
         flex: 0 0 calc(50% - 20px);
     }
-}*/
+
+    .wrapper2 {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
 /* desktop */
 @media screen and (min-width: 1024px) {
     .container {

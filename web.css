@@ -55,7 +55,7 @@ body, h1, h2, p, ul, li {
 }
 
 /* mobile */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 923px) {
     .container {
         flex-direction: column;
     }
@@ -92,7 +92,7 @@ body, h1, h2, p, ul, li {
     }
 }*/
 /* desktop */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 924px) {
     .container {
         flex-wrap: wrap;
     }

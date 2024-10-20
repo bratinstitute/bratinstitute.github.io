@@ -56,8 +56,12 @@
             <img src="./images/TBD.png" alt="TBD" width="100%">
          </div>
       </div>
-      <footer>
-         <p>copyright 2024 brat institute</p>
-     </footer>
+      <script>
+         fetch('footer.html')
+             .then(response => response.text())
+             .then(data => {
+                 document.getElementById('footer').innerHTML = data;
+             });
+     </script>
    </BODY>
 </HTML>

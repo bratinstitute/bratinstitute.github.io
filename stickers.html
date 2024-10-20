@@ -55,6 +55,12 @@
             <p>email <a href="mailto:buybrat@gmail.com?Subject=STICKERS">buybrat@gmail.com</a> to inquire</p>
          </div>
       </div>
-
+      <script>
+         fetch('footer.html')
+             .then(response => response.text())
+             .then(data => {
+                 document.getElementById('footer').innerHTML = data;
+             });
+     </script>
    </BODY>
 </HTML>

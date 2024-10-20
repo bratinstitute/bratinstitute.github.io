@@ -6,14 +6,14 @@
       <link rel="icon" type="image/x-icon" href="/images/favicon.png">
    </HEAD>
    <BODY>
-      <div class="header">
-         <div><a href="https://bratinstitute.com/"><img src="./images/bratlogo.png" alt="bratlogo" width="150px"></a></div>
-         <div class="header2">
-            <p><a href="https://bratinstitute.com/apparel.html">apparel</a></p>
-            <p><a href="https://bratinstitute.com/other.html">other stuff</a></p>
-            <p><a href="https://bratinstitute.com/contact.html">contact</a></p>
-         </div>
-      </div>
+      <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+</script>
        
       <div class="container page">
          <div class="wrapper2">

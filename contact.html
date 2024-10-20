@@ -9,8 +9,8 @@
       <div class="header">
          <div><a href="https://bratinstitute.com/"><img src="./images/bratlogo.png" alt="bratlogo" width="150px"></a></div>
          <div class="header2">
-            <p><a href="apparel.html">apparel</a></p>
-            <p><a href="other.html">other stuff</a></p>
+            <p><a href="index.html?category=apparel">apparel</a></p>
+            <p><a href="index.html?category=other">other stuff</a></p>
             <p><a href="contact.html" class="selected">contact</a></p>
          </div>
       </div>
@@ -27,6 +27,7 @@
             <img src="./images/QR-code.png" alt="newsletter" width="100%">
          </div>
       </div>
+      <div id="footer"></div>
       <script>
          fetch('footer.html')
              .then(response => response.text())

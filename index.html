@@ -16,77 +16,77 @@
 </script>
        
       <div class="container">
-         <div class="wrapper">
+         <div class="wrapper" data-category="apparel">
             <a href=prattuniversity.html><img src="./images/customtop.png" alt="custom" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">pratt cambridge</figcaption>
                <figcaption class="right-caption">60</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="apparel">
             <a href=prattuniversity.html><img src="./images/providence.png" alt="providence" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">pratt providence</figcaption>
                <figcaption class="right-caption">60</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="apparel">
             <a href="prattuniversity.html"><img src="./images/prattmilwaukee.png" alt="milwaukee" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">pratt university</figcaption>
                <figcaption class="right-caption">sold out</figcaption>
             </div>
          </div>   
-         <div class="wrapper">
+         <div class="wrapper" data-category="apparel">
             <a href=bratshirt.html><img src="./images/bratshirt.gif" alt="brat" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">brat shirts</figcaption>
                <figcaption class="right-caption">30+</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="apparel">
             <a href="uniformtop1.html"><img src="./images/uniformtop.png" alt="uniformtop" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">school uniform top</figcaption>
                <figcaption class="right-caption">20</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="other">
             <a href=stickers.html><img src="./images/bratcover.png" alt="stickers" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">stickers</figcaption>
                <figcaption class="right-caption">5+</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="apparel">
             <a href="logotop1.html"><img src="./images/logoshirt.png" alt="logoshirt1" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">brat logo top</figcaption>
                <figcaption class="right-caption">sold out</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="other">
             <a href="lanyard.html"><img src="./images/choker1.png" alt="choker1" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">id lanyard choker</figcaption>
                <figcaption class="right-caption">sold out</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="other">
             <a href="newsletter.html"><img src="./images/QR-code.png" alt="newsletter" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption"></figcaption>
                <figcaption class="right-caption">subscribe to our newsletter</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="other">
             <a href="stamp.html"><img src="./images/posterstamps-thumbnail.png" alt="stamp" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">endorsement stamps</figcaption>
                <figcaption class="right-caption">preorder</figcaption>
             </div>
          </div>
-         <div class="wrapper">
+         <div class="wrapper" data-category="other">
             <a href="please-insist.html"><img src="./images/please.png" alt="stamp" width="100%"></a>
             <div class="captions">
                <figcaption class="left-caption">framed please & insist</figcaption>
@@ -98,6 +98,45 @@
             <img src="./images/TBD.png" alt="TBD" width="100%">
          </div>
       </div>
+      <script>
+         function filterItems(category) {
+            const items = document.querySelectorAll('.wrapper'); // Get all items
+            const links = document.querySelectorAll('.header2 p a'); // Get all header links
+      
+            // Show/hide items based on the category
+            items.forEach(item => {
+               if (category === 'all' || item.getAttribute('data-category') === category) {
+                  item.style.display = 'block'; // Show the item
+               } else {
+                  item.style.display = 'none'; // Hide the item
+               }
+            });
+      
+            // Remove 'selected' class from all links
+            links.forEach(link => link.classList.remove('selected'));
+      
+            // Add 'selected' class to the correct link
+            if (category === 'apparel') {
+               document.querySelector('a[onclick="filterItems(\'apparel\')"]').classList.add('selected');
+            } else if (category === 'other') {
+               document.querySelector('a[onclick="filterItems(\'other\')"]').classList.add('selected');
+            }
+         }
+      
+         // Function to get URL query parameters
+         function getCategoryFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('category') || 'all'; // Default to 'all' if no category is provided
+         }
+      
+         // Automatically apply the correct filter when the page loads
+         document.addEventListener('DOMContentLoaded', () => {
+            const category = getCategoryFromURL();
+            filterItems(category);
+         });
+      </script>
+
+      <div id="footer"></div>
       <script>
          fetch('footer.html')
              .then(response => response.text())

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<HTML>
+   <HEAD>
+      <TITLE>brat negative space logo top</TITLE>
+      <link rel="stylesheet" type="text/css" href="web.css">
+      <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+   </HEAD>
+   <BODY>
+      <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+</script>
+       
+      <div class="container">
+         <div class="wrapper2">
+            <img src="./images/negativespace.png" alt="negative space logo top" width="100%">
+         </div>
+         <div class="wrapper2">
+            <img src="./images/negativespace.jpg" alt="negative space logo" width="100%">
+         </div>
+         <div class="wrapper2">
+            <p>brat negative space logo top | 30
+               <br>
+               <br>custom designs available.<br>discounts apply if you provide the base article.
+               <br>
+               <br>email <a href="mailto:buybrat@gmail.com?Subject=NEGATIVE%20SPACE%20LOGO%20TOP">buybrat@gmail.com</a> to inquire
+            </p>
+         </div>
+         <div class="wrapper2">
+            <img src="./images/TBD.png" alt="TBD" width="100%">
+         </div>
+      </div>
+      <div id="footer"></div>
+      <script>
+         fetch('footer.html')
+             .then(response => response.text())
+             .then(data => {
+                 document.getElementById('footer').innerHTML = data;
+             });
+     </script>
+   </BODY>
+</HTML>

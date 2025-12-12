@@ -63,6 +63,23 @@ a:hover {
     margin-bottom: 50px;
 }
 
+.wrapper3 {
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center; /* vertically center items inside cells */
+    justify-items: center; /* horizontally center grid content */
+}
+
+.wrapper3 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* center smaller images horizontally */
+}
+
 .captions {
     display: flex;
     justify-content: space-between;
@@ -140,38 +157,13 @@ footer {
         width: 100%; /* Ensure full width on mobile */
         bottom: 0;
     }
+    .wrapper3 {
+        width: 80%;
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on mobile/tablet */
+        gap: 10px;
+    }
 }
 
-/*
-@media screen and (min-width: 641px) and (max-width: 1023px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .wrapper {
-        width: 80%;
-        text-align: center;
-    }
-
-    .container page {
-        flex-wrap: wrap;
-    }
-
-    .wrapper2 {
-        flex: 0 0 calc(50% - 20px);
-    }
-
-    .left-caption,
-    .right-caption {
-        font-size: 1.1em;
-    }
-
-    body, p, ul, li {
-        margin: 0;
-        padding: 0;
-        font-size: 1.1em;
-    }
-}*/
 /* desktop */
 @media screen and (min-width: 1024px) {
     .header img {
@@ -197,6 +189,11 @@ footer {
 
     .wrapper2 {
         flex: 0 0 0 calc(50% - 20px);
+    }
+
+    .wrapper3 {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
     }
 
     footer {

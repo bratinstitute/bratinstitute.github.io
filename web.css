@@ -24,29 +24,36 @@ a:hover {
 
 .header {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
     padding: 20px 0;
     background: white;
     color: black;
 }
 
 .header img {
-    margin-bottom: 10px; /* Add some spacing below the logo */
+    margin-bottom: 10px;
 }
 
 .header2 {
     display: flex;
-    justify-content: center; /* Center links horizontally */
-    gap: 35px; /* Add spacing between links */
-    flex-direction: row; /* Horizontal layout for links */
+    justify-content: center;
+    gap: 35px;
+    flex-direction: row;
 }
 
 .header2 p {
-    margin: 0; /* Ensure consistent alignment */
+    margin: 0;
 }
 
 .container {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.container-cards {
     padding: 5%;
     display: flex;
     align-items: center;
@@ -69,15 +76,15 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    align-items: center; /* vertically center items inside cells */
-    justify-items: center; /* horizontally center grid content */
+    align-items: center;
+    justify-items: center;
 }
 
 .wrapper3 img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* center smaller images horizontally */
+    margin: 0 auto;
 }
 
 .captions {
@@ -116,20 +123,25 @@ footer {
 
 @media screen and (max-width: 1023px) {
     .header {
-        padding: 15px 0; /* Adjust padding for smaller screens */
+        padding: 15px 0;
     }
 
     .header img {
-        width: 250px; /* Scale logo for mobile */
+        width: 250px;
         margin-bottom: 15px;
     }
 
     .header2 p {
-        font-size: 1.2em; /* Adjust font size for better readability */
+        font-size: 1.2em;
     }
     
     .container {
         flex-direction: column;
+    }
+
+    .container-cards {
+        flex-direction: column;
+        margin-top: -5%;
     }
     
     .wrapper {
@@ -154,12 +166,12 @@ footer {
 
     footer {
         font-size: 0.5em;
-        width: 100%; /* Ensure full width on mobile */
+        width: 100%;
         bottom: 0;
     }
     .wrapper3 {
         width: 80%;
-        grid-template-columns: repeat(4, 1fr); /* 4 columns on mobile/tablet */
+        grid-template-columns: repeat(4, 1fr);
         gap: 10px;
     }
 }
@@ -167,7 +179,7 @@ footer {
 /* desktop */
 @media screen and (min-width: 1024px) {
     .header img {
-        width: 300px; /* Larger logo for desktop */
+        width: 300px;
         margin-bottom: 20px;
     }
 
@@ -180,6 +192,15 @@ footer {
     }
 
     .container page {
+        flex-wrap: wrap;
+    }
+
+    .container-cards {
+        flex-wrap: wrap;
+        margin-top: -10%;
+    }
+
+    .container-cards page {
         flex-wrap: wrap;
     }
     
@@ -198,6 +219,6 @@ footer {
 
     footer {
         bottom: 0;
-        width: 100%; /* Full width of the page */
+        width: 100%;
     }
 }
